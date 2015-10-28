@@ -6,7 +6,7 @@ class DashboardControllerTest < ActionController::TestCase
     @request.env["devise.mapping"] = Devise.mappings[:user]
     get :index
     assert_response :redirect
-    sign_in User.first
+    sign_in users(:dick)
   end
 
   test 'get unauthenticated dashboard' do
