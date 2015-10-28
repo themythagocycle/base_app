@@ -18,6 +18,8 @@ gem 'kaminari'
 gem 'paperclip'
 
 group :development, :test do
+  gem 'minitest'
+  gem 'capybara'
   gem 'byebug'
 end
 
