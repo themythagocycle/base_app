@@ -3,10 +3,10 @@ require 'test_helper'
 class DashboardControllerTest < ActionController::TestCase
 
   test 'get authenticated dashboard' do
-    @request.env["devise.mapping"] = Devise.mappings[:user]
+    @user = users(:dick)
+    sign_in @user
     get :index
-    assert_response :redirect
-    sign_in users(:dick)
+    assert_response :success
   end
 
   test 'get unauthenticated dashboard' do
