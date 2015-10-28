@@ -3,3 +3,8 @@
 Ruby 2.2.1
 Rails 4.2.4
 sqlite3
+
+run rake db:migrate after cloning the repo
+
+to change the app name, modify line 9 in /app/config/application.rb
+  module BaseApp to whatever
